@@ -32,7 +32,7 @@ namespace Accounts.Controllers
                 }
                 else
                 {
-                    Console.WriteLine($"Error: {response.StatusCode}");
+                    Console.WriteLine($"Error testing git: {response.StatusCode}");
                 }
             }
 
