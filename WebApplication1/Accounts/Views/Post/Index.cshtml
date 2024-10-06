@@ -1,0 +1,26 @@
+﻿@model List<Accounts.Models.Post>
+
+
+<h2>Post List</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>UserId</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var post in Model)
+        {
+            <tr>
+                <td>@post.Id</td>
+                <td>@post.UserId</td>
+                <td>@Html.ActionLink(post.Title, "Details", new { id = post.Id })</td>
+                <td>@post.Body</td>
+            </tr>
+        }
+    </tbody>
+</table>

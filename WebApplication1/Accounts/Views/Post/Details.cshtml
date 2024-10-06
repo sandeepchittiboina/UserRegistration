@@ -1,0 +1,34 @@
+﻿@model Post
+
+<h2>Post</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>UserId</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    <tbody>
+      
+            <tr>
+                <td>@Model.Id</td>
+                <td>@Model.UserId</td>
+                <td>@Model.Title</td>
+                <td>@Model.Body</td>
+                <td><a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+        
+                    <form asp-action="Delete" asp-route-id="@Model.Id" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this post?');">
+                            Delete
+                        </button>
+                    </form>
+
+                    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                </td>
+            </tr>
+        
+    </tbody>
+</table>

@@ -1,0 +1,20 @@
+﻿@model Accounts.Models.Post
+
+<h2>Edit Post</h2>
+
+<form asp-action="Edit" method="post">
+    <div>
+        <label>User ID</label>
+        <input asp-for="UserId" class="form-control" />
+    </div>
+    <div>
+        <label>Title</label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+    <div>
+        <label>Body</label>
+        <textarea asp-for="Body" class="form-control"></textarea>
+    </div>
+    <input type="submit" value="Save" class="btn btn-success" />
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
